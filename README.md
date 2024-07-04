@@ -1,6 +1,20 @@
 # Scala Technical Challenge for Lineage
 Your task is to create a program that will extract technical lineage from input.XML.
 
+  // Side notes
+  // objects in informatica
+  // WORKFLOW >> SESSION -> MAPPING > TRANSFORMATION
+  // WORKFLOW folds SESSIONs
+  // SESSION has_attribute MAPPINGNAME -> link to MAPPING
+  // ((TRANSFORMATION) INSTANCE == TABLE, with invalid attribute 'DBDNAME')
+  // (FIELD == COLUMN)
+  // MAPPING folds CONNECTORs
+  // CONNECTOR has attributes TOFIELD and TOINSTANCE, supposedly meaning COLUMN and TABLE [*]
+  // no such thing like SCHEMA or smth
+  // L:364 <TRANSFORMFIELD DATATYPE ="nstring" DEFAULTVALUE ="ERROR(&apos;transformation error&apos;)" EXPRESSION ="CONCAT(FirstName, CONCAT(MiddleName,LastName))" EXPRESSIONTYPE ="GENERAL" NAME ="NewFullName" PORTTYPE ="OUTPUT" PRECISION ="10" SCALE ="0"/>
+
+
+
 ### What is technical lineage?
 In this context, lineage is a graph where nodes are columns and relations represent 
 transfer of the data. There are many ways to generate lineage, 
